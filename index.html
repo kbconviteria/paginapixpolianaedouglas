@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poliana e Douglas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('fundo.png');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #333;
+            padding: 2rem;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 1rem;
+        }
+        button {
+            padding: 0.8rem 1.2rem;
+            font-size: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Poliana e Douglas</h2>
+        <p>Seu carinho e sua presença já são o melhor presente que poderíamos receber! Mas, se desejar nos presentear, é só clicar no botão para copiar o Pix ou escanear o QR Code no app do seu banco.</p>
+        <img src="qrcode_pix.png" alt="QR Code do Pix" />
+        <br />
+        <button onclick="copiarPix()">Copiar Pix</button>
+    </div>
+    <script>
+        function copiarPix() {
+            navigator.clipboard.writeText("00020126360014BR.GOV.BCB.PIX0114+55629361806015204000053039865802BR5901N6001C62070503***630494C7").then(function() {
+                alert("Código Pix copiado com sucesso!");
+            }, function(err) {
+                alert("Erro ao copiar o código Pix");
+            });
+        }
+    </script>
+</body>
+</html>
